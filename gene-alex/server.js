@@ -2,12 +2,23 @@
 
 const fs = require('fs');
 const express = require('express');
+<<<<<<< HEAD
 const pg = require('pg');
+=======
+
+const pg = require('pg');
+
+>>>>>>> 13e6133106d251f613c4789594f2c8cc9481899e
 const bodyParser = require('body-parser');
 const app = express();
 
+<<<<<<< HEAD
 const PORT = process.env.PORT || 3000;
 const conString = 'alexbowers://localhost:5432';
+=======
+const conString = 'postgress://localhost:5432';
+
+>>>>>>> 13e6133106d251f613c4789594f2c8cc9481899e
 const client = new pg.Client(conString);
 
 // REVIEW: Use the client object to connect to our DB.
@@ -23,7 +34,11 @@ app.use(express.static('./public'));
 // REVIEW: Routes for requesting HTML resources
 app.get('/new', (request, response) => {
   // COMMENT: What number(s) of the full-stack-diagram.png image correspond to the following line of code? Which method of article.js is interacting with this particular piece of `server.js`? What part of CRUD is being enacted/managed by this particular piece of code?
+<<<<<<< HEAD
   // 5, read from crud, initNewPage.
+=======
+  // It is corresponding to number 5. 
+>>>>>>> 13e6133106d251f613c4789594f2c8cc9481899e
   response.sendFile('new.html', {root: './public'});
 });
 
